@@ -14,6 +14,7 @@ function onFormSubmit(event) {
       password: password.value,
     };
     console.log(obj);
+    formElem.reset();
   } else {
     alert("All fields must be filled!");
   }

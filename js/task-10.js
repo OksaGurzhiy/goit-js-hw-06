@@ -27,15 +27,16 @@ function createBoxes(amount) {
   }
   destroyBoxes();
   let size = 20;
-
+  let arrayBox = [];
   for (let i = 0; i < amount; i += 1) {
     size += 10;
     const divElemInBox = document.createElement("div");
     divElemInBox.style.backgroundColor = getRandomHexColor();
     divElemInBox.style.width = `${size}px`;
     divElemInBox.style.height = `${size}px`;
-    divBoxes.append(divElemInBox);
+    arrayBox.push(divElemInBox);
   }
+  divBoxes.append(...arrayBox);
   input.value = "";
 }
 
